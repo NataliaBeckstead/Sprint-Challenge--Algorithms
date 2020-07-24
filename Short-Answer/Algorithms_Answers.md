@@ -28,14 +28,9 @@ same time complecsity as a loop, but taking more memory
 
 Suppose that you have an n-story building and plenty of eggs. Suppose also that an egg gets broken if it is thrown off floor f or higher, and doesn't get broken if dropped off a floor less than floor f. Devise a strategy to determine the value of f such that the number of dropped + broken eggs is minimized.
 
-start at floor f
-while we have space to throw egg
-    throw egg
-at this moment we're out of eggs, or all floors below f+1 full of eggs
-also we haven't broke as many eggs as we can
-all other eggs will be broken
-while we still have eggs
-    floor += 1
-    throw all eggs this floor can fit
+For this task I would use binary search
+if in the middle of the building egg is broken, go lower for amount of floors below me / 2
+if egg saved, go higher for amount of floors higher me / 2
+I found f floor when I had to go up or down just 1 floor, and it will be the floor where egg didn't broke
 
-Since number of iterations depends on amount of eggs, time complexity will be O(n)
+Runtime complexity is O(log n)
