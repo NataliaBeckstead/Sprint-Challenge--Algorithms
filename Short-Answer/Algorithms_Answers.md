@@ -15,9 +15,9 @@ n * n < n * n * n
    a = 4 * n * n
 etc until we run loop n times
 
-b) O(n^2)
+b) O(n*log n)
 
-2 nested loops, both depends on n
+2 nested loops, n and log n
 
 c) O(n)
 
